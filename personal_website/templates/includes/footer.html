@@ -1,0 +1,12 @@
+{% load static %}
+<footer class="taskbar">
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-8">
+            <a href="https://github.com/Belyanski" class="btn start-button"><img src='{% static 'css/icons/github.png' %}' class="icon-16"> GitHub</a>
+            <a href="https://www.linkedin.com/in/yaroslav-belyanski/" class="btn start-button"><img src='{% static 'css/icons/linkedin.png' %}' class="icon-16"> Linkedin</a>
+            <a href="https://t.me/ingrungewetrust" class="btn start-button"><img src='{% static 'css/icons/telegram.png' %}' class="icon-16">Telegram</a>
+        </div>
+        <div class="col-4 time">© {% now "d-m-Y H:i" %}</div>
+    </div>
+
+</footer>

@@ -1,12 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-</head>
-<body>
-    <h1>Главная страница</h1>
-    <p>Текст главной страницы</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Главная страница
+{% endblock %} 
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Добро пожаловать,</h1>
+  <p class="lead">на мой личный сайт-портфолио!</p>
+</div>
+<div class="container" id="page-content">
+  <div class="row mb-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header icon">
+          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/note-0.png' %}"> Кто я?</h4>
+        </div>
+        <div class="card-body">
+          <img src="{% static 'css/personal_photo.jpg' %}" class="img-fluid">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Меня зовут Ярослав.</li>
+            <li>27 лет.</li>
+            <li>Живу в Санкт-Петербурге.</li>
+          </ul>
+          <div class="btn-group btn-block" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">
+              <a href="https://t.me/ingrungewetrust" target="_blank">
+              <img src="{% static 'css/icons/telegram.png' %}" class="icon-16"> Write me</button>
+            <button type="button" class="btn btn-secondary">
+              <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11" target="_blank">
+                <img src="{% static 'css/icons/globe_map-4.png' %}" class="icon-16"> Find me
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 my-auto">
+      <div id="app" style="min-height: 400px">
+      </div>
+      <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+      <script>
+        const Webamp = window.Webamp;
+        new Webamp({
+          initialTracks: [{
+            metaData: {
+              artist: "Dusty Springfield",
+              title: "Spooky"
+            },
+            url: "{% static 'css/Dusty Springfield-Spooky.mp3' %}",
+            duration: 223
+          }],
+        }).renderWhenReady(document.getElementById('app'));
+      </script>
+    </div>
+  </div>
+</div>
+{% endblock %}

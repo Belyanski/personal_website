@@ -40,6 +40,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'personal_website.urls'
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
@@ -87,7 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
