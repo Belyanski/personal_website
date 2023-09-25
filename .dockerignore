@@ -1,0 +1,30 @@
+# Виртуальное окружение и зависимости
+venv/
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Файлы и директории, созданные при запуске Django приложения
+db.sqlite3
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+*.swp
+*.swo
+staticfiles/
+media/
+
+# Локальные настройки
+local_settings.py
+settings/local.py
+
+# Файлы и директории, связанные с системой контроля версий
+.git/
+.svn/
+
+# Настройки IDE
+.vscode/
+.idea/
