@@ -1,32 +1,52 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %} 
 {% load static %}
 
-{% block title %}
-  О сайте
-{% endblock %} 
+{% block title %} О сайте {%endblock %}
 
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Стек технологий</h1>
+  <p class="lead">он все расскажет</p>
 </div>
 <div class="container" id="page-content">
   <div class="row justify-content-center mb-5">
     <div class="col-md-6 mb-4">
       <div class="card">
         <div class="card-header icon">
-          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/python.png' %}"> Python</h4>
+          <h4 class="my-0 font-weight-normal">
+            <img src="{% static 'css/icons/python.png' %}" /> Python
+          </h4>
         </div>
         <div class="card-body">
           <ul class="list-unstyled mt-3 mb-4">
-            <li>Python</li>
-            <li>Python</li>
-            <li>Python</li>
+            <li>
+              Всеми любимый и ненавистный <b>Python</b> - именно он ответственен
+              за бэкенд этого сайта.
+            </li>
           </ul>
-          <div class="btn-group btn-block" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/envelope_closed-1.png' %}" class="icon-16"> Email me</button>
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/globe_map-4.png' %}" class="icon-16">  Find me IRL</button>
-            <button type="button" class="btn btn-secondary">Win95.CSS</button>
+          <div
+            class="btn-group btn-block"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.python.org" target="_blank"
+                ><img
+                  src="{% static 'css/icons/python.png' %}"
+                  class="icon-16"
+                />
+                Python Website</a
+              >
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a href="https://docs.python.org" target="_blank"
+                ><img
+                  src="{% static 'css/icons/document-0.png' %}"
+                  class="icon-16"
+                />
+                Python Documentation</a
+              >
+            </button>
           </div>
         </div>
       </div>
@@ -34,18 +54,43 @@
     <div class="col-md-6 mb-4">
       <div class="card">
         <div class="card-header icon">
-          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/django.png' %}"> Django</h4>
+          <h4 class="my-0 font-weight-normal">
+            <img src="{% static 'css/icons/django.png' %}" /> Django
+          </h4>
         </div>
         <div class="card-body">
           <ul class="list-unstyled mt-3 mb-4">
-            <li>Django</li>
-            <li>Django</li>
-            <li>Django</li>
+            <li>
+              <b>Django</b> aka <b>«цифровое Lego»</b> дал возможность
+              избавиться от головных болей там, где это необходимо.
+            </li>
           </ul>
-          <div class="btn-group btn-block" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/envelope_closed-1.png' %}" class="icon-16"> Email me</button>
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/globe_map-4.png' %}" class="icon-16">  Find me IRL</button>
-            <button type="button" class="btn btn-secondary">Win95.CSS</button>
+
+          <div
+            class="btn-group btn-block"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.djangoproject.com/" target="_blank"
+                ><img
+                  src="{% static 'css/icons/django.png' %}"
+                  class="icon-16"
+                />
+                Django Website</a
+              >
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a
+                href="https://docs.djangoproject.com/en/stable/"
+                target="_blank"
+                ><img
+                  src="{% static 'css/icons/document-0.png' %}"
+                  class="icon-16"
+                />
+                Django Documentation</a
+              >
+            </button>
           </div>
         </div>
       </div>
@@ -53,15 +98,116 @@
     <div class="col-md-12 mb-4">
       <div class="card">
         <div class="card-header icon">
-          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/note-0.png' %}"> SQL(?)</h4>
+          <h4 class="my-0 font-weight-normal">
+            <img src="{% static 'css/icons/cylinder_database-1.png' %}" /> SQL
+          </h4>
         </div>
         <div class="card-body">
-          <p>SQL(?)</p>
-          <p>SQL(?)</p>
-          <div class="btn-group btn-block" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/envelope_closed-1.png' %}" class="icon-16"> Email me</button>
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/globe_map-4.png' %}" class="icon-16">  Find me IRL</button>
-            <button type="button" class="btn btn-secondary">Win95.CSS</button>
+          <p>
+            <b>SQLite</b> для души. <b>PostgreSQL</b> для прода. Можно было бы
+            остановиться на первом, но взрослые мальчики всегда подключают
+            всегда Postgre.
+          </p>
+          <b><p>Execution progress:</p></b>
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <p><span class="progress-text">0%</span></p>
+            </div>
+          </div>
+
+          <br />
+          <div
+            class="btn-group btn-block"
+            role="group"
+            aria-label="Basic example"
+          >
+            <!-- Кнопка для SQLite -->
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.sqlite.org/" target="_blank"
+                ><img
+                  src="{% static 'css/icons/sqlite.png' %}"
+                  class="icon-16"
+                />
+                SQLite Website</a
+              >
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.sqlite.org/docs.html" target="_blank"
+                ><img
+                  src="{% static 'css/icons/document-0.png' %}"
+                  class="icon-16"
+                />
+                SQLite Documentation</a
+              >
+            </button>
+
+            <!-- Кнопка для PostgreSQL -->
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.postgresql.org/" target="_blank"
+                ><img
+                  src="{% static 'css/icons/postgresql.png' %}"
+                  class="icon-16"
+                />
+                PostgreSQL Website</a
+              >
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.postgresql.org/docs/" target="_blank"
+                ><img
+                  src="{% static 'css/icons/document-0.png' %}"
+                  class="icon-16"
+                />
+                PostgreSQL Documentation</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header icon">
+          <h4 class="my-0 font-weight-normal">
+            <img src="{% static 'css/icons/docker.png' %}" /> Docker
+          </h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>
+              «Запаковано, отправлено». Удобство <b>Docker'а</b> стоит всего
+              дискового пространства.
+            </li>
+          </ul>
+          <div
+            class="btn-group btn-block"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button type="button" class="btn btn-secondary">
+              <a href="https://www.docker.com/" target="_blank">
+                <img
+                  src="{% static 'css/icons/docker.png' %}"
+                  class="icon-16"
+                />
+                Docker Website
+              </a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a href="https://docs.docker.com/" target="_blank">
+                <img
+                  src="{% static 'css/icons/document-0.png' %}"
+                  class="icon-16"
+                />
+                Docker Documentation
+              </a>
+            </button>
           </div>
         </div>
       </div>
@@ -69,37 +215,40 @@
     <div class="col-md-6 mb-4">
       <div class="card">
         <div class="card-header icon">
-          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/note-0.png' %}"> About me</h4>
+          <h4 class="my-0 font-weight-normal">
+            <img src="{% static 'css/icons/bootstrap.png' %}" /> Bootstrap
+          </h4>
         </div>
         <div class="card-body">
           <ul class="list-unstyled mt-3 mb-4">
-            <li>It is not my photo</li>
-            <li>My name is Alexander</li>
-            <li>I am from Russia</li>
+            <li>
+              Отдельное спасибо <b>AlexBSoft</b>, который на базе
+              <b>Bootstrap</b> собрал этот стиль.
+            </li>
           </ul>
-          <div class="btn-group btn-block" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/envelope_closed-1.png' %}" class="icon-16"> Email me</button>
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/globe_map-4.png' %}" class="icon-16">  Find me IRL</button>
-            <button type="button" class="btn btn-secondary">Win95.CSS</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card">
-        <div class="card-header icon">
-          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/note-0.png' %}"> About me</h4>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>It is not my photo</li>
-            <li>My name is Alexander</li>
-            <li>I am from Russia</li>
-          </ul>
-          <div class="btn-group btn-block" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/envelope_closed-1.png' %}" class="icon-16"> Email me</button>
-            <button type="button" class="btn btn-secondary"><img src="{% static 'css/icons/globe_map-4.png' %}" class="icon-16">  Find me IRL</button>
-            <button type="button" class="btn btn-secondary">Win95.CSS</button>
+          <div
+            class="btn-group btn-block"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button type="button" class="btn btn-secondary">
+              <a href="https://getbootstrap.com/" target="_blank">
+                <img
+                  src="{% static 'css/icons/bootstrap.png' %}"
+                  class="icon-16"
+                />
+                Bootstrap Website
+              </a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a href="https://github.com/AlexBSoft/win95.css" target="_blank">
+                <img
+                  src="{% static 'css/icons/github.png' %}"
+                  class="icon-16"
+                />
+                AlexBSoft
+              </a>
+            </button>
           </div>
         </div>
       </div>
@@ -107,5 +256,3 @@
   </div>
 </div>
 {% endblock %}
-
-

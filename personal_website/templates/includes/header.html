@@ -25,8 +25,8 @@
                     Гостевая книга
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Посмотреть записи гостей</a>
-                    <a class="dropdown-item" href="#">Оставить запись</a>
+                    <a class="dropdown-item" href="{% url 'guestbook:guestbook' %}">Посмотреть записи гостей</a>
+                    <a class="dropdown-item" href="{% url 'guestbook:guest_entries' %}">Оставить запись</a>
                 </div>
             </li>
         </ul>

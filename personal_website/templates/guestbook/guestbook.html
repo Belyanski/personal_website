@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гостевая книга</title>
-</head>
-<body>
-    <h1>Гостевая книга</h1>
-    <p>Записи гостей</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+  Гостевая книга
+{% endblock %} 
+
+{% block content %}
+  {% block header %}
+  <h1>Тут можно будет посмотреть записи из гостевой книги</h1>
+  {% endblock header %}
+{% endblock %}
