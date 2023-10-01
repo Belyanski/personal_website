@@ -1,11 +1,51 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
   Внести запись
 {% endblock %} 
 
 {% block content %}
-  {% block header %}
-  <h1>Тут можно будет оставить запись в гостевой книге</h1>
-  {% endblock header %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Вопросы, просьбы, пожелания?</h1>
+</div>
+  <br>
+  <div class="container">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Оставить запись</h4>
+      </div>
+      <div class="card-body">
+        <form method="post" class="windows-95-form">
+          {% csrf_token %}
+          
+          <!-- Поле "Your name" -->
+          <div class="form-group row">
+            <label for="{{ form.name.id_for_label }}" class="col-sm-2 col-form-label">
+                <img src="{% static 'css/icons/user_world-0.png' %}" class="icon-16-4"> Your name:
+            </label>
+            <div class="col-sm-10">
+                {{ form.name }}
+            </div>
+        </div>
+        
+          
+          <!-- Поле "Message content" -->
+          <div class="form-group">
+            <label for="{{ form.message.id_for_label }}">Message content:</label>
+            <textarea class="form-95" id="{{ form.message.id_for_label }}" name="{{ form.message.name }}" rows="3">{{ form.message.value }}</textarea>
+        </div>
+          <!-- Кнопка отправки -->
+          <div class="form-group row">
+              <div class="col-sm-10">
+                  <button type="submit" class="btn btn-primary">Отправить запись</button>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 {% endblock %}
+
+

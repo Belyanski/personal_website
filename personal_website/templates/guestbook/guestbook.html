@@ -1,11 +1,77 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
   Гостевая книга
 {% endblock %} 
 
 {% block content %}
-  {% block header %}
-  <h1>Тут можно будет посмотреть записи из гостевой книги</h1>
-  {% endblock header %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Гостевая книга</h1>
+</div>
+<br>
+  <!-- Вывод записей -->
+  <div class="container">
+    <div class="row">
+      {% for entry in page %}
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-header">
+              <img src="{% static 'css/icons/user_card.png' %}" /> {{ entry.name }}</h4>
+            </div>
+            <div class="card-body">
+              <p>{{ entry.message }}</p>
+              <hr>
+              <p><img src="{% static 'css/icons/time_and_date-3.png' %}" /> {{ entry.timestamp }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Пагинация -->
+  <div class="container text-center">
+    {% if page.has_other_pages %}
+      <nav aria-label='Page navigation' class='my-5'>
+        <ul class='pagination justify-content-center'>
+          {% if page.has_previous %}
+            <li class='page-item'>
+              <a class='btn-group btn-block btn start-button' href='?page=1'>&nbsp;Первая&nbsp;</a>
+            </li>
+            <li class='page-item'>
+              <a class='btn-group btn-block btn start-button' href='?page={{ page.previous_page_number }}'>
+                &nbsp;Предыдущая&nbsp;
+              </a>
+            </li>
+          {% endif %}
+          {% for i in page.paginator.page_range %}
+            {% if page.number == i %}
+              <li class='page-item'>
+                <span class='btn-group btn-block btn start-button'>&nbsp;{{ i }}&nbsp;</span>
+              </li>
+            {% else %}
+              <li class='page-item'>
+                <a class='btn-group btn-block btn start-button' href='?page={{ i }}'>&nbsp;{{ i }}&nbsp;</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          {% if page.has_next %}
+            <li class='page-item'>
+              <a class='btn-group btn-block btn start-button' href='?page={{ page.next_page_number }}'>
+                &nbsp;Следующая&nbsp;
+              </a>
+            </li>
+            <li class='page-item'>
+              <a class='btn-group btn-block btn start-button' href='?page={{ page.paginator.num_pages }}'>
+                &nbsp;Последняя&nbsp;
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>  
 {% endblock %}
+
