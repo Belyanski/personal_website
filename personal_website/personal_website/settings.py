@@ -14,6 +14,7 @@ DEBUG = os.getenv('DEBUG', False) == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
+CSRF_TRUSTED_ORIGINS = ['http://*.belyanski.ru','http://*.127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -110,6 +111,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'static_backend'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
