@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
   Мои проекты
 {% endblock %} 
@@ -8,24 +10,62 @@
   {% block header %}
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Что сотворил</h1>
+    <p class="lead">на мой личный сайт-портфолио!</p>
   </div>
   {% endblock header %}
   <div class="container mb-4">
-    
-    <ul class="nav nav-tabs" id="myTab" role="tablist" s>
-     <li class="nav-item">
-       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-     </li>
-   </ul>
-   <div class="tab-content" id="myTabContent">
-     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">алло</div>
-     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">как дела</div>
-     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-   </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Foodgram</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Yatube</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Magic 8 ball</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+          <div class="col-6">
+            <img src="{% static 'css/foodgram.png' %}" class="img-fluid" alt="Foodgram" style="width: 100%;">
+          </div>
+          <div class="col-6">
+            <p style="color: black;">
+              <a href="https://foodkilogram.ddns.net/signin" target="_blank"><b>Foodgram</b></a> – это сайт, на котором пользователи могут публиковать рецепты, добавлять чужие рецепты в избранное и подписываться на публикации других авторов. 
+              Сервис «Список покупок» позволяет пользователям создавать список продуктов, которые нужно купить для приготовления выбранных блюд.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row">
+          <div class="col-6">
+            <img src="{% static 'css/yatube.png' %}" class="img-fluid" alt="Yatube" style="width: 100%;">
+          </div>
+          <div class="col-6">
+            <p style="color: black;">
+              <a href="http://yaroslav8belyanski.pythonanywhere.com/" target="_blank"><b>Yatube</b></a> – социальная сеть для публикации личных дневников. 
+              Пользователи могут заходить на чужие страницы, подписываться на авторов и комментировать их записи.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="row">
+          <div class="col-6">
+            <img src="{% static 'css/bot.jpg' %}" class="img-fluid" alt="Magic 8 ball" style="width: 100%;">
+          </div>
+          <div class="col-6">
+            <p style="color: black;">
+              <a href="https://t.me/magic_b8ll_bot" target="_blank"><b>Magic 8 ball</b></a> – знаменитый шар предсказаний. Возможно, знакомый вам по культовому фильму Трасса 60. 
+              Данный проект его цифровой аналог для мессенджера Telegram. Перейдите по ссылке и задайте ему вопрос о своем будущем!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 {% endblock %}
