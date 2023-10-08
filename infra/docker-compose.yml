@@ -5,7 +5,7 @@ services:
   db:
     image: postgres:13
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - pg_data:/var/lib/postgresql/data/
     env_file:
       - ../.env
     restart: always
@@ -33,4 +33,4 @@ services:
 
 volumes:
   static_value:
-  postgres_data:
+  pg_data:
