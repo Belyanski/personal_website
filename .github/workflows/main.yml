@@ -2,7 +2,7 @@ name: Portfolio Workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
       - '**/README.md'
 
