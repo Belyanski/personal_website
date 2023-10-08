@@ -14,7 +14,7 @@ DEBUG = os.getenv('DEBUG', False) == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
-CSRF_TRUSTED_ORIGINS = ['https://*.belyanski.ru','http://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS").split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -84,7 +84,6 @@ else:
             'PORT': os.getenv('DB_PORT', 5432)
         }
     }
-
 
 
 AUTH_PASSWORD_VALIDATORS = [
