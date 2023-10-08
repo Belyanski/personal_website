@@ -66,7 +66,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'personal_website.wsgi.application'
 
 
-
 if DEBUG:
     DATABASES = {
         'default': {
