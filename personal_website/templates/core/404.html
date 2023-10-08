@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Ошибочка
+{% endblock %} 
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container" id="page-content">
+  <div class="row mb-5">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-header icon">
+          <h4 class="my-0 font-weight-normal "><img src="{% static 'css/icons/note-0.png' %}"> 404 страница не найдена</h4>
+        </div>
+        <div class="card-body text-center">
+          <img src="{% static 'css/confused_travolta.gif' %}" class="img-fluid">
+          <div class="btn-group btn-block" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">
+              <a href="{% url 'main:index' %}" target="_blank">
+              <img src="{% static 'css/icons/msie1-2.png' %}" class="icon-16"> На главную</button>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+{% endblock %}

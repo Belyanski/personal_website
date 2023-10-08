@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
@@ -11,3 +12,5 @@ urlpatterns = [
                                    namespace='guest_entries')),
     path('projects/', include('projects.urls', namespace='projects')),
 ]
+
+handler404 = 'core.views.custom_404'
