@@ -14,7 +14,7 @@ DEBUG = os.getenv('DEBUG', False) == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
-CSRF_TRUSTED_ORIGINS = ['http://*.belyanski.ru','http://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.belyanski.ru','http://*.127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
